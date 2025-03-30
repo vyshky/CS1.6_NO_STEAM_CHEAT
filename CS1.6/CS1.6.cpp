@@ -65,7 +65,7 @@ int main()
 			ReadProcessMemory(h_open_process, ptr_model, buffer, sizeof(buffer), 0);
 			if (buffer[0] != NULL) {
 				std::cout << "Model: " << buffer << "   " << ptr_model;
-				std::cout << " Player offset: " << player_list + i << " X_OFFSET: " << ptr_x_coord << " X: " << x_value << " Y: " << y_value << " Z: " << z_value << std::endl;
+				std::cout << " Player offset: " << player_list + i << " X_OFFSET: " << (int*)ptr_x_coord << " X: " << x_value << " Y: " << y_value << " Z: " << z_value << std::endl;
 			}
 		}
 		Sleep(100);
